@@ -1,0 +1,54 @@
+
+.tableBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 864px;
+    height: 573px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    background-color: white;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 50px 30px;
+    font-size: 25px;
+    font-weight:700;
+    color: gray;
+}
+.id{
+    width: 249px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+.passwd{
+    width: 358px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+.email{
+    width: 493px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+
+.submit{
+    font-size: 25px;
+    font-weight:500;
+    width:260px;
+    height:57px;
+    color:white;
+    background-color: #9fe7c9;
+    border-radius: 20px;
+    border:0;
+}
