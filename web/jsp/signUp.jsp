@@ -39,10 +39,11 @@
         connection = DriverManager.getConnection(jdbcUrl, "root", "02220222");
         statement = connection.createStatement();
         // sql query with null value(introduce)
-        String sql = "INSERT INTO User VALUES ('" + inputId + "', '" + inputPassword + "', '" + inputEmail + "', '" + inputName + "', null)";
+        String sql = "INSERT INTO User VALUES ('" + inputEmail + "', '" + inputName + "', '" + inputId + "', '" + inputPassword + "', null)";
         statement.executeUpdate(sql);
 
         out.println("success");
+        out.println("<script>alert('회원가입이 완료되었습니다.'); history.back();</script>");
     } catch (Exception exception) {
         out.println("DB 연동 오류: " + exception.getMessage());
     }

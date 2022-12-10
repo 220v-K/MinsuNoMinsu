@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>메인화면</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/8eb5905426.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+
+    .main {
+      width: 30px;
+      margin: 0 auto;
+    }
+    
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .fa-user {
+      position: absolute;
+    right: 27%;
+    top: 25px;
+    margin: 0;
+    }
+    .fa-pen {
+       position: absolute;
+    right: 25%;
+    top: 25px;
+    margin: 0;
+    }
+    
+    .nav {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      border: 1px solid; padding: 5px;
+      margin: 10px;
+      background-color: #9FE7C9;
+      justify-content: center;
+    }
+
+    .nav-item {
+      margin: 100px;
+      text-align: center;
+      
+    }
+
+     .foods {
+       display: flex;
+       text-align: center;
+       width: 1000px;
+       margin: 0 auto;
+    }
+
+    .food-item {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+      margin: 20px;
+    }
+
+    .search {
+    position: relative;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    }
+    
+    input {
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid #9FE7C9;
+    margin: 10px 0;
+    padding: 10px 12px;
+    font-family: fontAwesome;
+    text-align: center;
+    }
+    
+    .fa-search {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    margin: 0;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="main"
+    <div class="title">
+      M<span style = "color:#9FE7C9">N</span>M
+    </div>
+    <div class="subtitle">
+      <span style = "color:#9FE7C9">요리초보</span>를 위한 <span style = "color:#9FE7C9">레시피</span> 블로그 
+    </div>
+    <div class="signin">
+      <i class="fas fa-user"></i>
+      <i class="fas fa-pen"></i>
+    </div>
+  </div>
+<!--여기 추가필요-->
+    
+  <div class="nav">
+    <div class="nav-item">초급요리</div>
+    <div class="nav-item">중급요리</div>
+    <div class="nav-item">고급요리</div>
+    <div class="nav-item">도전! 요리사</div>
+  </div>
+  <br><br>
+    <div class="search">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="요리 이름 또는 재료를 검색하세요">
+    </div>
+  <br><br><br>
+
+  
+  
+
+
+  
+ <!-- <div class="searchfood">
+    <input type="text" placeholder="요리 이름 또는 재료를 검색하세요">
+    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
+  </div>
+-->
+  <div class="foods">
+    <div class="food-item">
+    백종원 떡볶이 레시피
+    </div>
+    
+    <div class="food-item">
+    백종원 떡볶이 레시피
+    </div>
+    
+    <div class="food-item">
+    백종원 떡볶이 레시피     
+    </div>
+  </div>
+  
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>

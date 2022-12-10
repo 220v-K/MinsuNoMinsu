@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<title>레시피 등록</title>
+<style>
+    .topbox{
+        display: flex; 
+        justify-content: flex-start; 
+        margin-top:20px; 
+        margin-bottom:20px;
+    }
+    .top{
+        font-size: 70px;
+        font-weight: bold;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left:20px;
+        
+    }
+    .title {
+        background-color: aquamarine;
+        color: white;
+        text-align: center;
+        height: 104px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 864px;
+        height: 573px;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        background-color: white;
+        margin: auto;
+        margin-top: 36px;
+        margin-bottom: 36px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 50px 30px;
+        font-size: 25px;
+        font-weight:700;
+        color: gray;
+    }
+    .recipetitle{
+        width: 249px;
+        height: 49px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+    .recipeintro{
+        width: 358px;
+        height: 49px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+    .phase{
+        width: 493px;
+        height: 49px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+    .button{
+        font-size: 25px;
+        font-weight:500;
+        width:260px;
+        height:57px;
+        color:white;
+        background-color: aquamarine;
+        border-radius: 20px;
+        border:0;
+    }
+    .material-symbols-outlined {
+        font-size: 70px;
+        font-weight: bold;
+        box-sizing: border-box;
+        margin-right:auto;
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+    .icon1 {
+        margin-left: auto;
+    }
+</style>
+</head>
+<body>
+<div class="topbox">
+    <div class="top">MNM</div>
+    <div class="icon1"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
+    <div class="icon2"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
+</div>
+<div class="title"><h1>레시피 등록</h1></div>
+<div>
+<div class="box">
+    <form method="POST" action="">
+    <table border="0">
+        <tr>
+            <td>레시피 제목</td>
+            <td><input type="text" name="recipetitle" size="20" class="recipetitle"></td>
+        </tr>
+        <tr>
+            <td>요리 소개</td>
+            <td><input type="password" name="recipeintro" size="30" class="recipeintro"></td>
+        </tr>
+       <tr>
+          <td>카테고리</td>
+         <td>
+              <select name = 'category'>
+                <option value="korean">한식</option>
+                <option value="chinese">중식</option>
+                <option value="japanese">일식</option>
+                <option value="western">양식</option>
+                <option value="etc">기타</option>
+              </select>
+            </td>
+        </tr>
+       <tr>
+            <td>요리 정보</td>
+            <td>인원
+              <select name = 'personnel'>
+                <option value="oneman">1인분</option>
+                <option value="twoman">2인분</option>
+                <option value="threeman">3인분</option>
+                <option value="overfour">4인분이상</option>
+              </select>
+              시간
+              <select name = 'timetaken'>
+                <option value="30min">30분이내</option>
+                <option value="60min">1시간이내</option>
+                <option value="120min">2시간이내</option>
+                <option value="over120min">2시간이상</option>
+              </select>
+              난이도
+              <select name = 'difficulty'>
+                <option value="easy">아무나</option>
+                <option value="soso">중급자</option>
+                <option value="hard">상급자</option>
+              </select>
+              
+            </td>
+         
+        </tr>
+        <tr>
+            <td>단계 1</td>
+            <td><input type="" name="phase" size="40" class="phase"></td>
+        </tr>
+    </table>
+    </form>
+</div>
+</div>
+<center><input type="button" value="등록하기" class="button"></center>
+</body>
+</html>
