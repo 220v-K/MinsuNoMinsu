@@ -1,19 +1,34 @@
-
-.main {
-    width: 30px;
-    margin: 0 auto;
+body{
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-.title {
-    font-size: 20px;
+.main-signin {
+    display: flex;
+    float: right;
+}
+
+.main {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    width: 227px;
+    height: 90px;
+    font-size: 70px;
     font-weight: bold;
     text-align: center;
+    margin-top: 10px;
+    margin-left: 42%;
 }
 
 .subtitle {
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
+    width: 389px;
+    height: 47px;
+    margin-left: 35%;
 }
 .fa-user {
     position: absolute;
@@ -29,7 +44,7 @@
 }
 
 .nav {
-    height: 40px;
+    height: 80px;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -41,9 +56,11 @@
 }
 
 .nav-item {
-    margin: 100px;
+    height: 74px;
+    width: 210px;
+    font-size: 30px;
     text-align: center;
-
+    margin-top: 40px;
 }
 
 .foods {
@@ -51,20 +68,26 @@
     text-align: center;
     width: 1000px;
     margin: 0 auto;
+    
 }
 
 .food-item {
     width: 300px;
     height: 300px;
-    border: 1px solid black;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    background-color: white;
     margin: 20px;
+    font-size: 20px;
+    font-weight:normal;
 }
 
 .search {
     position: relative;
     text-align: center;
-    width: 400px;
     margin: 0 auto;
+    width: 700px;
+    height: 100px;
 }
 
 input {
@@ -73,14 +96,17 @@ input {
     border: 5px solid #9FE7C9;
     margin: 10px 0;
     padding: 10px 12px;
-    font-family: fontAwesome;
     text-align: center;
+    width: 700px;
+    height: 70px;
+    font-size: 25px;
 }
 
 .fa-search {
     position: absolute;
     right: 15px;
-    top: 20px;
-    margin: 0;
+    top: 30px;
+    margin-top: 15px;
+    font-size: 30px;
 }
 
