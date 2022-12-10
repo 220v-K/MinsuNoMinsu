@@ -41,6 +41,13 @@ table {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
 }
+.nickname{
+    width: 358px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
 
 .submit{
     font-size: 25px;
