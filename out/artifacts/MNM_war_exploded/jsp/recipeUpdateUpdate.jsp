@@ -96,6 +96,8 @@
         // update recipe progress
         // delete all progress data
         sql = "DELETE FROM progress WHERE recipeNo = '" + recipeNo + "'";
+        statement.executeUpdate(sql);
+
         // insert new progress data
         for (int i = 0; i < progresses.length; i++) {
             int progressNo = i + 1;
@@ -107,6 +109,8 @@
         // update recipe ingredient
         // delete all ingredient data
         sql = "DELETE FROM ingredient WHERE recipeNo = '" + recipeNo + "'";
+        statement.executeUpdate(sql);
+
         // insert new ingredient data
         for (int i = 0; i < ingredients.length; i++) {
             sql = "INSERT INTO ingredient (ingredientName, ingredientAmount, recipeNo) VALUES ('" + ingredients[i] + "', '" + 0 + "', '" + recipeNo + "')";
