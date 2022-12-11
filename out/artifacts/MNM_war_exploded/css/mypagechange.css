@@ -1,12 +1,30 @@
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
-input {
-    padding-left : 20px;
-    padding-right: 20px;
-    font-size: 20px;
+.titlebox{
+    display: flex; 
+    justify-content: flex-start; 
+    margin-top:20px; 
+    margin-bottom:20px;
+    font-size: 70px;
 }
-
+.title{
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left:20px;
+    
+}
+.subtitle {
+    background-color: #9fe7c9;
+    color: white;
+    text-align: center;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
 .bar{
     background-color: #00CE94;
     color: white;
@@ -19,8 +37,6 @@ input {
 .bar-item {
     margin: auto;
     background-color: #00CE94;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 .box {
     display: flex;
@@ -117,4 +133,18 @@ tr, td {
     padding: 5px;
     float: right;
 
+}
+.material-symbols-outlined {
+    font-size: 70px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right:auto;
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+.icon1 {
+    margin-left: auto;
 }

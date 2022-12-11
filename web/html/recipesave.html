@@ -22,7 +22,7 @@
 <div class="pageTitle"><h1>레시피 등록</h1></div>
 <div>
     <div id="box">
-        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="">
+        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                     <td>레시피 제목</td>
@@ -31,6 +31,10 @@
                 <tr>
                     <td>요리 소개</td>
                     <td><input type="text" name="recipeintro" size="100" class="recipeintro"></td>
+                </tr>
+                <tr>
+                    <td>요리 사진</td>
+                    <td><input type="file" name="recipeImg" size="100" class="recipeImg"></td>
                 </tr>
                 <tr name="put-in">
                     <td>재료</td>

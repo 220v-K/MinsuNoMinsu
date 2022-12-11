@@ -30,7 +30,7 @@
             color: #00000065;
             font-size: 20px;
             font-weight: 500;
-            display : flex;
+            display: flex;
             justify-content: center;
         }
 
@@ -66,11 +66,28 @@
             padding-right: 30px;
         }
     </style>
+    <script>
+        // if session not exists
+        function checkSession(){
+            var email = session.getAttribute("email");
+            if (email != null) {
+                // change parent window to mypagechange.html
+                window.opener.location.href = "./mypagechange.html";
+                // close popup
+                window.close();
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function()
+        {
+            checkSession();
+        });
+    </script>
+
 </head>
-<body>
+<body onload="checkSession()">
 <script>
-    function OpenWeb(){
-        window.location.href="http://www.naver.com";
+    function OpenWeb() {
+        window.location.href = "http://www.naver.com";
     }
 </script>
 <br><br>
@@ -84,10 +101,13 @@
 </form>
 <div class="link">
     <!-- 새 창에서 열도록 수정하기 -->
-    <div onclick="closepopup()">회원가입</div> |
-    <div onclick="closepopup()">아이디 찾기</div> |
+    <div onclick="closepopup()">회원가입</div>
+    |
+    <div onclick="closepopup()">아이디 찾기</div>
+    |
     <div onclick="closepopup()">비밀번호 찾기</div>
 </div>
+
 
 <script>
     // ID, PW 입력 확인
@@ -105,7 +125,7 @@
         return true;
     }
 
-    function closepopup(){
+    function closepopup() {
         window.opener.location.href();
         self.close();
     }

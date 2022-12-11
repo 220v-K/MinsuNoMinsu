@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/Desktop/Java/apache-tomcat-8.5.82/lib/jsp-api.jar!/" />
       <root url="jar://$USER_HOME$/Desktop/Java/apache-tomcat-8.5.82/lib/servlet-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Java/apache-tomcat-8.5.82/lib/cos.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
