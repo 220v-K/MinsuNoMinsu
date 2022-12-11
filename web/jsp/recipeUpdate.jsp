@@ -32,7 +32,7 @@ To change this template use File | Settings | File Templates.
 <%
     request.setCharacterEncoding("UTF-8");
 
-    String recipeName = "고수";
+    String recipeName = request.getParameter("recipeName");
     String recipeExplain = "";
     int recipeCategory = 0;
     int forNperson = 0;
@@ -41,6 +41,7 @@ To change this template use File | Settings | File Templates.
     Date recipeUploadTime = null;
     String userEmail = "";
     int recipeNo = 0;
+    String fileName = "";
 
     List<String> progresses = new ArrayList<>();
     List<String> ingredients = new ArrayList<>();
@@ -73,6 +74,10 @@ To change this template use File | Settings | File Templates.
             recipeUploadTime = resultSet.getDate("recipeUploadTime");
             userEmail = resultSet.getString("userEmail");
             recipeNo = resultSet.getInt("recipeNo");
+            fileName = resultSet.getString("fileName");
+            if (fileName == null) {
+                fileName = "사진 없음";
+            }
         }
 
         System.out.println(recipeName);
@@ -84,6 +89,7 @@ To change this template use File | Settings | File Templates.
         System.out.println(recipeUploadTime);
         System.out.println(userEmail);
         System.out.println(recipeNo);
+        System.out.println(fileName);
 
         // get progress information from progress table
         sql = "SELECT * FROM progress where recipeNo = " + recipeNo;
@@ -111,7 +117,7 @@ To change this template use File | Settings | File Templates.
 
 <body>
 <div class="titlebox">
-    <div class="title" onclick="location.href='../html/main.html';">MNM</div>
+    <div class="title" onclick="location.href='../jsp/main.jsp';">MNM</div>
     <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span>
     </div>
     <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined"
@@ -120,7 +126,7 @@ To change this template use File | Settings | File Templates.
 <div class="subtitle"><h1>레시피 수정</h1></div>
 <div>
     <div id="box">
-        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="">
+        <form method="post" action="../jsp/recipeUpdateUpdate.jsp" onsubmit="" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                     <td>레시피 제목</td>
@@ -131,6 +137,11 @@ To change this template use File | Settings | File Templates.
                     <td>요리 소개</td>
                     <td><input type="text" name="recipeintro" size="100" class="recipeintro" value="<%=recipeExplain%>">
                     </td>
+                </tr>
+                <tr>
+                    <td>요리 사진</td>
+                    <td><input type="file" name="recipeImg" size="100" class="recipeImg" ></td>
+                    <td>기존 사진 : <%=fileName%></td>
                 </tr>
                 <tr name="put-in">
                     <td>재료</td>

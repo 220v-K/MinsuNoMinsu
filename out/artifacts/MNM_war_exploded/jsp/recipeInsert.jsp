@@ -8,23 +8,57 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.lang.String" %>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="static java.sql.JDBCType.NULL" %>
+<%@ page import="java.util.Enumeration" %>
+
 <html>
 <head>
     <title>레시피 등록</title>
 </head>
 <body>
 <%
-    request.setCharacterEncoding("UTF-8");
+    String saveFolder = application.getRealPath("/fileStorage");
+    int fileSize = 5 * 1024 * 1024; // 5MB
+    String encType = "UTF-8";
+
+    MultipartRequest multi = null;
+    try {
+        multi = new MultipartRequest(request, saveFolder, fileSize, encType, new DefaultFileRenamePolicy());
+    } catch (Exception e) {
+        System.out.println("파일 업로드 실패 " + e.getMessage());
+        e.printStackTrace();
+    }
+
+    Enumeration<?> files = multi.getFileNames();
+    String fileName = "";
+    String originalFileName = "";
+    String contentType = "";
+    String length = "";
+    if (files.hasMoreElements()) {
+        String element = (String) files.nextElement();
+
+        fileName = multi.getFilesystemName(element);
+        originalFileName = multi.getOriginalFileName(element);
+        contentType = multi.getContentType(element);
+        length = String.valueOf(multi.getFile(element).length());
+
+        System.out.println("파일 이름 : " + fileName + "<br>");
+        System.out.println("원본 파일 이름 : " + originalFileName + "<br>");
+        System.out.println("파일 타입 : " + contentType + "<br>");
+        System.out.println("파일 크기 : " + length + "<br>");
+    }
+
     // fetch input data from recipesave.html
-    String recipetitle = request.getParameter("recipetitle");
-    String recipeintro = request.getParameter("recipeintro");
-    String categoryString = request.getParameter("category");
-    String personnelString = request.getParameter("personnel");
-    String timetakenString = request.getParameter("timetaken");
-    String difficultyString = request.getParameter("difficulty");
-    String[] progresses = request.getParameterValues("phase");
-    String[] ingredients = request.getParameterValues("ingredient");
+    String recipetitle = multi.getParameter("recipetitle");
+    String recipeintro = multi.getParameter("recipeintro");
+    String categoryString = multi.getParameter("category");
+    String personnelString = multi.getParameter("personnel");
+    String timetakenString = multi.getParameter("timetaken");
+    String difficultyString = multi.getParameter("difficulty");
+    String[] progresses = multi.getParameterValues("phase");
+    String[] ingredients = multi.getParameterValues("ingredient");
 
     System.out.println("데이터 가져오기 성공");
 
@@ -78,8 +112,8 @@
         }
 
         // insert data into recipe table
-        sql = "INSERT INTO recipe ( recipeName, recipeExplain, recipeCategory, forNperson, withInTime, difficulty, recipeUploadTime, userEmail) " +
-                "VALUES ('" + recipetitle + "', '" + recipeintro + "', '" + recipecategory + "', '" + personnel + "', '" + timetaken + "', '" + difficulty + "', '" + uploadTime + "', '" + userEmail + "')";
+        sql = "INSERT INTO recipe ( recipeName, recipeExplain, recipeCategory, forNperson, withInTime, difficulty, recipeUploadTime, userEmail, filename) " +
+                "VALUES ('" + recipetitle + "', '" + recipeintro + "', '" + recipecategory + "', '" + personnel + "', '" + timetaken + "', '" + difficulty + "', '" + uploadTime + "', '" + userEmail + "', '" + fileName +"')";
         statement.executeUpdate(sql);
 
         // get recipeNo
