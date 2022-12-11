@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); </style>
     <link rel="stylesheet"
@@ -11,18 +11,21 @@
     <script src="../js/popup.js"></script>
     <link rel="stylesheet" href="../css/recipesave.css"/>
 <title>레시피 등록</title>
+
 </head>
 <body>
 <div class="titlebox">
     <div class="title" onclick="location.href='./main.html';">MNM</div>
-    <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
-    <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
+    <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span>
+    </div>
+    <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined"
+                                                                          style="color : red;">edit</span></div>
 </div>
 <div class="subtitle"><h1>레시피 등록</h1></div>
 
 <div>
     <div id="box">
-        <form method="POST" action="../jsp/recipeInsert.jsp" onsubmit="">
+        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="">
             <table border="0">
                 <tr>
                     <td>레시피 제목</td>
@@ -33,7 +36,7 @@
                     <td><input type="text" name="recipeintro" size="100" class="recipeintro"></td>
                 </tr>
                 <tr name="put-in">
-                    <td>준비물</td>
+                    <td>재료</td>
                     <td name="put-in"><input type="text" name="ingredient" size="10" class="ingredient"></td>
                     <td><button type="button" name="put-in" class="put-in">재료 추가</button></td>
                 </tr>
@@ -54,6 +57,7 @@
                             <option value="3">3인분</option>
                             <option value="4">4인분이상</option>
                         </select>
+
                     </td>
                 </tr>
                 <tr>
@@ -75,6 +79,7 @@
 
                     </td>
                 </tr>
+
                 <tr name="put-step">
                     <td>단계 1</td>
                     <td><input type="text" name="phase" size="40" class="phase"></td>
@@ -86,11 +91,9 @@
         </form>
     </div>
 </div>
-
 <script>
-    var n=1;
-    $(document).on("click", "button[name=put-step]", function()
-    {
+    var n = 1;
+    $(document).on("click", "button[name=put-step]", function () {
         n += 1;
         var addsteptest =
         '<tr name="put-step">' +

@@ -26,22 +26,25 @@ body{
 }
 
 .main-title {
-    width: 227px;
+    width: 100%;
+    padding-left: 140px;
     height: 90px;
     font-size: 70px;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
-    margin-left: 42%;
+    margin-left: auto;
 }
 
 .subtitle {
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     width: 389px;
     height: 47px;
-    margin-left: 35%;
+    text-align: center;
+    margin: 0 auto;
 }
 .fa-user {
     position: absolute;

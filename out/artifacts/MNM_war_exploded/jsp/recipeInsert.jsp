@@ -23,13 +23,10 @@
     String personnelString = request.getParameter("personnel");
     String timetakenString = request.getParameter("timetaken");
     String difficultyString = request.getParameter("difficulty");
-    String phase1 = request.getParameter("phase1");
-    String phase2 = request.getParameter("phase2");
+    String[] progresses = request.getParameterValues("phase");
+    String[] ingredients = request.getParameterValues("ingredient");
 
     System.out.println("데이터 가져오기 성공");
-
-    // combine phases to String array
-    String[] phases = {phase1, phase2};
 
     // cast String to int
     int recipecategory = Integer.parseInt(categoryString);
@@ -45,8 +42,6 @@
     System.out.println(personnel);
     System.out.println(timetaken);
     System.out.println(difficulty);
-    System.out.println(phase1);
-    System.out.println(phase2);
 
 
     // connect to database
@@ -82,7 +77,6 @@
             throw new Exception();
         }
 
-
         // insert data into recipe table
         sql = "INSERT INTO recipe ( recipeName, recipeExplain, recipeCategory, forNperson, withInTime, difficulty, recipeUploadTime, userEmail) " +
                 "VALUES ('" + recipetitle + "', '" + recipeintro + "', '" + recipecategory + "', '" + personnel + "', '" + timetaken + "', '" + difficulty + "', '" + uploadTime + "', '" + userEmail + "')";
@@ -92,13 +86,27 @@
         sql = "SELECT recipeNo FROM recipe WHERE recipeName = '" + recipetitle + "'";
         resultSet = statement.executeQuery(sql);
 
-        // insert phases data into Progress table
+        // insert progresses data into Progress table
         if (resultSet.next()) {
             int recipeNo = resultSet.getInt("recipeNo");
-            for (int i = 0; i < phases.length; i++) {
+            for (int i = 0; i < progresses.length; i++) {
                 int progressNo = i + 1;
                 sql = "INSERT INTO progress(progressOrder, progressText, recipeNo) " +
-                        " VALUES ('" + progressNo + "', '" + phases[i] + "', '" + recipeNo + "')";
+                        " VALUES ('" + progressNo + "', '" + progresses[i] + "', '" + recipeNo + "')";
+                statement.executeUpdate(sql);
+            }
+        }
+
+        // get recipeNo
+        sql = "SELECT recipeNo FROM recipe WHERE recipeName = '" + recipetitle + "'";
+        resultSet = statement.executeQuery(sql);
+
+        // insert ingredients data into Ingredient table
+        if (resultSet.next()) {
+            int recipeNo = resultSet.getInt("recipeNo");
+            for (int i = 0; i < ingredients.length; i++) {
+                sql = "INSERT INTO ingredient(ingredientName, ingredientAmount, recipeNo) " +
+                        " VALUES ('" + ingredients[i] + "', '" + "0" + "', '" + recipeNo + "')";
                 statement.executeUpdate(sql);
             }
         }
