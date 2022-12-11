@@ -15,8 +15,8 @@
 </head>
 <body>
 <div class="titlebox">
-    <div class="title" onclick="location.href='./main.html';">MNM</div>
-    <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span>
+    <div class="title" onclick="location.href='../jsp/main.jsp';">MNM</div>
+    <div class="icon1" onclick="location.href='../jsp/mypagechange.jsp';"><span class="material-symbols-outlined" style="color : green;">account_circle</span>
     </div>
     <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined"
                                                                           style="color : red;">edit</span></div>
@@ -25,7 +25,7 @@
 
 <div>
     <div id="box">
-        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="">
+        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                     <td>레시피 제목</td>
@@ -34,6 +34,10 @@
                 <tr>
                     <td>요리 소개</td>
                     <td><input type="text" name="recipeintro" size="100" class="recipeintro"></td>
+                </tr>
+                <tr>
+                    <td>요리 사진</td>
+                    <td><input type="file" name="recipeImg" size="100" class="recipeImg"></td>
                 </tr>
                 <tr name="put-in">
                     <td>재료</td>
