@@ -26,6 +26,8 @@ table {
     border: 0.8px solid rgb(186, 186, 186);
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
+    font-size:20px;
+    color:rgba(54, 54, 54, 0.559)
 }
 .passwd{
     width: 358px;
@@ -33,6 +35,8 @@ table {
     border: 0.8px solid rgb(186, 186, 186);
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
+    font-size:20px;
+    color:rgba(54, 54, 54, 0.559)
 }
 .email{
     width: 493px;
@@ -40,6 +44,8 @@ table {
     border: 0.8px solid rgb(186, 186, 186);
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
+    font-size:20px;
+    color:rgba(54, 54, 54, 0.559)
 }
 .nickname{
     width: 358px;
@@ -47,6 +53,8 @@ table {
     border: 0.8px solid rgb(186, 186, 186);
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
+    font-size:20px;
+    color:rgba(54, 54, 54, 0.559)
 }
 
 .submit{

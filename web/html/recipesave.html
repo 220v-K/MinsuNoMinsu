@@ -1,220 +1,237 @@
 <!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); </style>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <title>레시피 등록</title>
-    <link rel="stylesheet" href="../css/top.css">
-    <style>
-        .topbox {
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 20px;
-            margin-bottom: 20px;
+<title>레시피 등록</title>
+<style>
+    body{
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .titlebox{
+        display: flex; 
+        justify-content: flex-start; 
+        margin-top:20px; 
+        margin-bottom:20px;
+    }
+    .title{
+        font-size: 70px;
+        font-weight:bold;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left:20px;
+        
+    }
+    .subtitle {
+        background-color: #9fe7c9;
+        color: white;
+        text-align: center;
+        height: 104px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    #box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 487px;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        background-color: white;
+        margin: auto;
+        margin-top: 36px;
+        margin-bottom: 36px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 50px 30px;
+        font-size: 20px;
+        font-weight:700;
+        color: gray;
+    }
+    .recipetitle{
+        width: 249px;
+        height: 49px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+    .recipeintro{
+        width:500px;
+        height: 88px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+    .phase{
+        width: 493px;
+        height: 49px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+    .put-step {
+        font-size: 15px;
+        width: 80px;
+        height: 30px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: white;
+    }
+    .button-save{
+        font-size: 25px;
+        font-weight:500;
+        width:260px;
+        height:57px;
+        color:white;
+        background-color: #9fe7c9;
+        border-radius: 20px;
+        border:0;
+    }
+    .material-symbols-outlined {
+        margin-top: 20px;
+        font-size: 70px;
+        font-weight: bold;
+        box-sizing: border-box;
+        margin-right:auto;
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
         }
-
-        .top {
-            font-size: 70px;
-            font-weight: bold;
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-left: 20px;
-
+    .icon1 {
+        margin-left: auto;
+    }
+    select {
+        width: 120px; /* 원하는 너비설정 */
+        font-size: 15px;
+        padding: .8em .5em; /* 여백으로 높이 설정 */
+        font-family: inherit;  /* 폰트 상속 */
+        background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */  
+        border: 1px solid #999; 
+        border-radius: 10px; /* iOS 둥근모서리 제거 */
+        -webkit-appearance: none; /* 네이티브 외형 감추기 */
+        -moz-appearance: none;
+        appearance: none;
         }
-
-        .title {
-            background-color: aquamarine;
-            color: white;
-            text-align: center;
-            height: 104px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        .box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 864px;
-            height: 573px;
-            border: 1px solid lightgray;
-            border-radius: 20px;
-            background-color: white;
-            margin: auto;
-            margin-top: 36px;
-            margin-bottom: 36px;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        table {
-            border-collapse: separate;
-            border-spacing: 50px 30px;
-            font-size: 25px;
-            font-weight: 700;
-            color: gray;
-        }
-
-        .recipetitle {
-            width: 249px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        .recipeintro {
-            width: 358px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        .phase {
-            width: 493px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        .submit {
-            font-size: 25px;
-            font-weight: 500;
-            width: 260px;
-            height: 57px;
-            color: white;
-            background-color: aquamarine;
-            border-radius: 20px;
-            border: 0;
-        }
-
-        .material-symbols-outlined {
-            font-size: 70px;
-            font-weight: bold;
-            box-sizing: border-box;
-            margin-right: auto;
-            font-variation-settings: 'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 48
-        }
-
-        .icon1 {
-            margin-left: auto;
-        }
-    </style>
+    .ingredient {
+        width: 100px;
+        height: 49px;
+        border: 0.8px solid rgb(186, 186, 186);
+        background-color: rgb(232, 231, 231);
+        border-radius: 10px;
+    }
+</style>
 </head>
 <body>
-<div class="titleBox">
-    <div class="title">MNM</div>
-    <div class="icon1">
-        <button onclick="openPopup()" style="border: none; background-color: white;"><span
-                class="material-symbols-outlined" style="color : green;">account_circle</span></button>
+    <div class="titlebox">
+        <div class="title" onclick="location.href='./main.html';">MNM</div>
+        <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
+        <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
     </div>
-    <div class="icon2"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
-</div>
-<div class="title"><h1>레시피 등록</h1></div>
+<div class="subtitle"><h1>레시피 등록</h1></div>
 <div>
-    <div class="box">
-        <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="return inputCheck();">
-            <table border="0">
-                <tr>
-                    <td>레시피 제목</td>
-                    <td><input type="text" name="recipetitle" size="20" class="recipetitle"></td>
-                </tr>
-                <tr>
-                    <td>요리 소개</td>
-                    <td><input type="text" name="recipeintro" size="30" class="recipeintro"></td>
-                </tr>
-                <tr>
-                    <td>카테고리</td>
-                    <td>
-                        <select name='category'>
-                            <option value="1">한식</option>
-                            <option value="2">중식</option>
-                            <option value="3">일식</option>
-                            <option value="4">양식</option>
-                            <option value="5">기타</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>요리 정보</td>
-                    <td>인원
-                        <select name='personnel'>
-                            <option value="1">1인분</option>
-                            <option value="2">2인분</option>
-                            <option value="3">3인분</option>
-                            <option value="4">4인분이상</option>
-                        </select>
-                        시간
-                        <select name='timetaken'>
-                            <option value="1">30분이내</option>
-                            <option value="2">1시간이내</option>
-                            <option value="3">2시간이내</option>
-                            <option value="4">2시간이상</option>
-                        </select>
-                        난이도
-                        <select name='difficulty'>
-                            <option value="1">아무나</option>
-                            <option value="2">중급자</option>
-                            <option value="3">상급자</option>
-                        </select>
-
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>단계 1</td>
-                    <td><input type="text" name="phase1" size="40" class="phase"></td>
-                </tr>
-                <tr>
-                    <td>단계 2</td>
-                    <td><input type="text" name="phase2" size="40" class="phase"></td>
-                </tr>
-            </table>
-            <center><input type="submit" value="등록하기" class="submit"></center>
-        </form>
-    </div>
-
+<div id="box">
+    <form method="POST" action="">
+    <table border="0">
+        <thead>
+        <tr>
+            <td>레시피 제목</td>
+            <td><input type="text" name="recipetitle" size="20" class="recipetitle"></td>
+        </tr>
+        <tr>
+            <td>요리 소개</td>
+            <td><input type="text" name="recipeintro" size="100" class="recipeintro"></td>
+        </tr>
+       <tr id="inrow">
+          <td>준비물</td>
+            <td><input type="text" name="ingredient" size="10" class="ingredient"></td>
+            <td><button class="put-step" onclick="addIngredient()">재료 추가</button></td>
+              <!-- <select name = 'category'>
+                <option value="korean">한식</option>
+                <option value="chinese">중식</option>
+                <option value="japanese">일식</option>
+                <option value="western">양식</option>
+                <option value="etc">기타</option>
+              </select> -->
+        </tr>
+       <tr>
+            <td>요리 정보</td>
+            <td>인원
+              <select name = 'personnel'>
+                <option value="oneman">1인분</option>
+                <option value="twoman">2인분</option>
+                <option value="threeman">3인분</option>
+                <option value="overfour">4인분이상</option>
+              </select>
+                 시간
+              <select name = 'timetaken'>
+                <option value="30min">30분이내</option>
+                <option value="60min">1시간이내</option>
+                <option value="120min">2시간이내</option>
+                <option value="over120min">2시간이상</option>
+              </select>
+                 난이도
+              <select name = 'difficulty'>
+                <option value="easy">아무나</option>
+                <option value="soso">중급자</option>
+                <option value="hard">상급자</option>
+<!-- 카테고리의 도전!요리사는 2시간이상 + 상급자일 경우 -->
+              </select>
+              
+            </td>
+        </tr>
+        </thead>
+        <tbody id="row">
+        <tr>
+            <td>단계 1</td>
+            <td><input type="text" name="phase" size="40" class="phase"></td>
+            <td><button class="put-step" onclick="divResize()">단계 추가</button></td>
+        </tr>
+        </tbody>
+    </table>
+    </form>
 </div>
+</div>
+<center><input type="button" value="등록하기" class="button-save"></center>
 
-<script>
-    function inputCheck() {
-        var recipetitle = document.getElementsByName("recipetitle")[0].value;
-        var recipeintro = document.getElementsByName("recipeintro")[0].value;
-        var phase1 = document.getElementsByName("phase1")[0].value;
-        var phase2 = document.getElementsByName("phase2")[0].value;
-        if (recipetitle == "" || recipetitle == null) {
-            alert("레시피 제목을 입력해주세요.");
-            return false;
-        }
-        if (recipeintro == "" || recipeintro == null) {
-            alert("레시피 소개를 입력해주세요.");
-            return false;
-        }
-        if (phase1 == "" || phase1 == null) {
-            alert("레시피 단계를 입력해주세요.");
-            return false;
-        }
-        if (phase2 == "" || phase2 == null) {
-            alert("레시피 단계를 입력해주세요.");
-            return false;
-        }
-        return true;
+<script type="text/javascript">
+    var n=1;
+    function addRow() {
+        const table = document.getElementById('row');
+        var newRow = table.insertRow();//새 행 추가
+        const newCell1 = newRow.insertCell(0);//새 행에 cell 추가
+        const newCell2 = newRow.insertCell(1);//새 행에 cell 추가
+        const newCell3 = newRow.insertCell(2);//새 행에 cell 추가
+        n += 1;
+        newCell1.innerHTML = "단계 " + n ;
+        newCell2.innerHTML = "<input type='text' name='phase' size='40' class='phase'>";
+        newCell3.innerHTML = "<button class='put-step' onclick='addRow()'>단계 추가</button>";
+        divResize();
     }
-</script>
+    function divResize() {
+        var box = document.querySelector("#box");
+        boxHeight = box.offsetHeight;
+        console.log(boxHeight);
+        //document.getElementById("box").style.height = boxHeight + 80 + 'px';
+        box.offsetHeight = boxHeight + 80 + 'px';
+        alert(box.offsetHeight);
+    }
+    function addIngredient() { //열 추가하기
+        const table = document.getElementById('inrow');
+        var newRow = table.insertRow();//새 행 추가
+        const newCell2 = newRow.insertCell(1);//새 행에 cell 추가
+        newCell2.innerHTML = "<input type='text' name='ingredient' size='10' class='ingredient'>";
+        divResize();
+    }
+    </script>
+
 </body>
 </html>

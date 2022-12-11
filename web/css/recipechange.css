@@ -1,0 +1,124 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.titlebox{
+    display: flex; 
+    justify-content: flex-start; 
+    margin-top:20px; 
+    margin-bottom:20px;
+}
+.title{
+    font-size: 70px;
+    font-weight:bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left:20px;
+    
+}
+.subtitle {
+    background-color: #9fe7c9;
+    color: white;
+    text-align: center;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 487px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    background-color: white;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 50px 30px;
+    font-size: 20px;
+    font-weight:700;
+    color: gray;
+}
+.recipetitle{
+    width: 249px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+.recipeintro{
+    width:500px;
+    height: 88px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+.phase{
+    width: 493px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+.put-step {
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: white;
+}
+.button-save{
+    font-size: 25px;
+    font-weight:500;
+    width: 200px;
+    height:57px;
+    color:white;
+    background-color: #9fe7c9;
+    border-radius: 20px;
+    border:0;
+    margin-left: 10px;
+}
+.material-symbols-outlined {
+    margin-top: 20px;
+    font-size: 70px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right:auto;
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+.icon1 {
+    margin-left: auto;
+}
+select {
+    width: 120px; /* 원하는 너비설정 */
+    font-size: 15px;
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: inherit;  /* 폰트 상속 */
+    background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */  
+    border: 1px solid #999; 
+    border-radius: 10px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    }
+.ingredient {
+    width: 100px;
+    height: 49px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: rgb(232, 231, 231);
+    border-radius: 10px;
+}
+.twobutton{
+    display: flex;
+    justify-content: center;
+}
