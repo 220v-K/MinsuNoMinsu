@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: jaewonlee
   Date: 2022/12/11
-  Time: 3:00 AM
+  Time: 10:46 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
@@ -11,7 +11,7 @@
 <%@ page import="static java.sql.JDBCType.NULL" %>
 <html>
 <head>
-    <title>레시피 등록</title>
+    <title>레시피 수정</title>
 </head>
 <body>
 <%
@@ -60,60 +60,62 @@
         Date uploadTime = new java.sql.Date(System.currentTimeMillis());
         String userEmail = (String) session.getAttribute("email");
 
-        // check user email is null or not
-        if (userEmail == null) {
-            System.out.println("email is null");
-            out.println("<script>alert('로그인 후 진행하세요.'); history.back();</script>");
-            throw new Exception();
-        }
-
-        // check if recipe title is already in database
+        // fetch recipe data from database
         String sql = "SELECT * FROM recipe WHERE recipeName = '" + recipetitle + "'";
         resultSet = statement.executeQuery(sql);
 
-        // if recipe title is already in database, print out error message and go back to recipesave.html
+        // check user email is same as recipe uploader
         if (resultSet.next()) {
-            out.println("<script>alert('이미 존재하는 이름의 레시피입니다.'); history.back();</script>");
+            String recipeUploader = resultSet.getString("userEmail");
+            // if user email is not same as recipe uploader, alert and go back to recipe page
+            if (!recipeUploader.equals(userEmail)) {
+                out.println("<script>alert('수정 권한이 없습니다.'); location.href='recipe.jsp';</script>");
+            }
+        }
+
+        // get recipeNo
+        sql = "SELECT recipeNo FROM recipe WHERE recipeName = '" + recipetitle + "'";
+        resultSet = statement.executeQuery(sql);
+
+        int recipeNo = 0;
+
+        // if recipe title is not exist in database, print out error message and go back to recipesave.html
+        if (!resultSet.next()) {
+            System.out.println("recipe title is not exist");
+            out.println("<script>alert('존재하는 레시피가 아닙니다.'); history.back();</script>");
             throw new Exception();
         }
+        recipeNo = resultSet.getInt("recipeNo");
 
-        // insert data into recipe table
-        sql = "INSERT INTO recipe ( recipeName, recipeExplain, recipeCategory, forNperson, withInTime, difficulty, recipeUploadTime, userEmail) " +
-                "VALUES ('" + recipetitle + "', '" + recipeintro + "', '" + recipecategory + "', '" + personnel + "', '" + timetaken + "', '" + difficulty + "', '" + uploadTime + "', '" + userEmail + "')";
+
+        // update recipe data
+        sql = "UPDATE recipe SET recipeName = '" + recipetitle + "', recipeExplain = '" + recipeintro + "', recipeCategory = " + recipecategory + ", forNperson = " + personnel + ", withInTime = " + timetaken + ", difficulty = " + difficulty + " WHERE recipeNo = '" + recipeNo + "'";
         statement.executeUpdate(sql);
 
-        // get recipeNo
-        sql = "SELECT recipeNo FROM recipe WHERE recipeName = '" + recipetitle + "'";
-        resultSet = statement.executeQuery(sql);
 
-        // insert progresses data into Progress table
-        if (resultSet.next()) {
-            int recipeNo = resultSet.getInt("recipeNo");
-            for (int i = 0; i < progresses.length; i++) {
-                int progressNo = i + 1;
-                sql = "INSERT INTO progress(progressOrder, progressText, recipeNo) " +
-                        " VALUES ('" + progressNo + "', '" + progresses[i] + "', '" + recipeNo + "')";
-                statement.executeUpdate(sql);
-            }
+        // update recipe progress
+        // delete all progress data
+        sql = "DELETE FROM progress WHERE recipeNo = '" + recipeNo + "'";
+        // insert new progress data
+        for (int i = 0; i < progresses.length; i++) {
+            int progressNo = i + 1;
+            sql = "INSERT INTO progress (progressOrder, progressText, recipeNo) VALUES ('" + progressNo + "', '" + progresses[i] + "', '" + recipeNo + "')";
+            statement.executeUpdate(sql);
         }
 
-        // get recipeNo
-        sql = "SELECT recipeNo FROM recipe WHERE recipeName = '" + recipetitle + "'";
-        resultSet = statement.executeQuery(sql);
 
-        // insert ingredients data into Ingredient table
-        if (resultSet.next()) {
-            int recipeNo = resultSet.getInt("recipeNo");
-            for (int i = 0; i < ingredients.length; i++) {
-                sql = "INSERT INTO ingredient(ingredientName, ingredientAmount, recipeNo) " +
-                        " VALUES ('" + ingredients[i] + "', '" + "0" + "', '" + recipeNo + "')";
-                statement.executeUpdate(sql);
-            }
+        // update recipe ingredient
+        // delete all ingredient data
+        sql = "DELETE FROM ingredient WHERE recipeNo = '" + recipeNo + "'";
+        // insert new ingredient data
+        for (int i = 0; i < ingredients.length; i++) {
+            sql = "INSERT INTO ingredient (ingredientName, ingredientAmount, recipeNo) VALUES ('" + ingredients[i] + "', '" + 0 + "', '" + recipeNo + "')";
+            statement.executeUpdate(sql);
         }
 
         // alert message
-        System.out.println("레시피 등록 성공");
-        out.println("<script>alert('레시피가 등록되었습니다.'); history.back();</script>");
+        System.out.println("레시피 수정 성공");
+        out.println("<script>alert('레시피가 수정되었습니다.'); history.back();</script>");
 
     } catch (Exception exception) {
         //error message
