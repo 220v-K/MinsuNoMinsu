@@ -39,18 +39,22 @@
         if (resultSet.next()) {
             // if password is correct, make session
             if (resultSet.getString("password").equals(pw)) {
-                HttpSession loginSession = request.getSession(true);
                 // 세션이 새로 생성되었다면, atrribute 추가
-                if (loginSession.isNew()) {
+                if (session.isNew()) {
                     out.println("새로운 세션 생성");
-                    loginSession.setAttribute("id", id);
-                    loginSession.setAttribute("pw", pw);
+                    session.setAttribute("id", id);
+                    session.setAttribute("pw", pw);
+                    session.setAttribute("name", resultSet.getString("nickname"));
+                    session.setAttribute("email", resultSet.getString("email"));
                 }
                 // 세션이 새로 생성되지 않았다면, attribute 변경
                 else {
                     out.println("기존 세션 사용");
-                    loginSession.setAttribute("id", id);
-                    loginSession.setAttribute("pw", pw);
+                    session.setAttribute("id", id);
+                    session.setAttribute("pw", pw);
+                    session.setAttribute("name", resultSet.getString("nickname"));
+                    session.setAttribute("email", resultSet.getString("email"));
+                    System.out.println("세션 이메일 : " + session.getAttribute("email"));
                 }
                 // 로그인 성공 시 alert
                 out.println("<script>alert('로그인 성공!');</script>");
