@@ -1,4 +1,5 @@
 <!doctype html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,25 +10,23 @@
     <link rel="stylesheet" href="../css/top.css">
     <link rel="stylesheet" href="../css/signup.css">
     <script src="../js/popup.js"></script>
-<title>아이디찾기</title>
+<title>고급 요리</title>
 </head>
 <body>
 <div class="titleBox">
     <div class="title" onclick="location.href='./main.jsp';">MNM</div>
     <div class="icon1" onclick="location.href='./mypagechange.jsp';"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
-    <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
+    <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
 </div>
-<div class="pageTitle"><h1>아이디 찾기</h1></div>
+<div class="pageTitle"><h1>고급 요리</h1></div>
 <div>
 <div class="tableBox">
     <form method="POST" action="">
     <table border="0">
         <tr>
-            <td>이메일 입력</td>
-            <td><input type="email" name="email" size="40" class="email"></td>
+            <td></td>
         </tr>
     </table>
-    <center><input type="submit" value="아이디 찾기" class="submit"></center>
     </form>
 </div>
 </div>

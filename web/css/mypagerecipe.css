@@ -19,8 +19,6 @@ input {
 .bar-item {
     margin: auto;
     background-color: #00CE94;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 .box {
     display: flex;
@@ -49,38 +47,6 @@ tr, td {
     border-bottom: 1px solid lightgray;
     padding: 20px;
 }
-.id {
-    width: 249px;
-    height: 49px;
-    border: 0.8px solid rgb(186, 186, 186);
-    background-color: rgb(232, 231, 231);
-    border-radius: 10px;
-    font-size: 15px;
-}
-.nickname{
-    width: 249px;
-    height: 49px;
-    border: 0.8px solid rgb(186, 186, 186);
-    background-color: rgb(232, 231, 231);
-    border-radius: 10px;
-    font-size: 15px;
-}
-.fixpassword{
-    width: 249px;
-    height: 49px;
-    border: 0.8px solid rgb(186, 186, 186);
-    background-color: rgb(232, 231, 231);
-    border-radius: 10px;
-    font-size: 15px;
-}
-.introme{
-    width: 358px;
-    height: 49px;
-    border: 0.8px solid rgb(186, 186, 186);
-    background-color: rgb(232, 231, 231);
-    border-radius: 10px;
-    font-size: 15px;
-}
 .myrecipe{
     width: 493px;
     height: 49px;
@@ -88,6 +54,13 @@ tr, td {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
     font-size: 15px;
+}
+.put-in{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    border: 0.8px solid rgb(186, 186, 186);
+    background-color: white;
 }
 .button-save{
     font-size: 25px;

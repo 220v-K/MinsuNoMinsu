@@ -1,3 +1,8 @@
+input {
+    padding-left : 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
 
 .tableBox {
     display: flex;
@@ -27,7 +32,9 @@ table {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
     font-size:20px;
-    color:rgba(54, 54, 54, 0.559)
+    color:rgba(54, 54, 54, 0.559);
+    padding-left : 20px;
+    padding-right: 20px;
 }
 .passwd{
     width: 358px;
@@ -36,7 +43,9 @@ table {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
     font-size:20px;
-    color:rgba(54, 54, 54, 0.559)
+    color:rgba(54, 54, 54, 0.559);
+    padding-left : 20px;
+    padding-right: 20px;
 }
 .email{
     width: 493px;
@@ -45,7 +54,9 @@ table {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
     font-size:20px;
-    color:rgba(54, 54, 54, 0.559)
+    color:rgba(54, 54, 54, 0.559);
+    padding-left : 20px;
+    padding-right: 20px;
 }
 .nickname{
     width: 358px;
@@ -54,7 +65,9 @@ table {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
     font-size:20px;
-    color:rgba(54, 54, 54, 0.559)
+    color:rgba(54, 54, 54, 0.559);
+    padding-left : 20px;
+    padding-right: 20px;
 }
 
 .submit{
@@ -66,4 +79,5 @@ table {
     background-color: #9fe7c9;
     border-radius: 20px;
     border:0;
+    
 }

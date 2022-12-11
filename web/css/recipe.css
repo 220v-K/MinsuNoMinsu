@@ -1,6 +1,11 @@
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
+input {
+    padding-left : 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
 .cookimage{
     margin-top: 150px; 
     display: flex;
@@ -102,14 +107,14 @@ body{
     margin-top: 35px;
 }
 input[type=text]{
-    width: 1280px;
+    width: 90%;
     height: 106px;
     border: none;
     background-color: rgb(237, 235, 235);
     border-radius: 5px;
     font-size: 20px;
 }
-input[type=button]
+input[type=submit]
 {
     float: right;
     margin-top: 20px;

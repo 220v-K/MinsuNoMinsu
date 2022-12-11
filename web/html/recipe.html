@@ -12,9 +12,9 @@
 </head>
 <body>
     <div class="titleBox">
-        <div class="title" onclick="location.href='./main.html';">MNM</div>
-        <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
-        <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
+        <div class="title" onclick="location.href='./main.jsp';">MNM</div>
+        <div class="icon1" onclick="location.href='./mypagechange.jsp';"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
+        <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
     </div>
     <div class="cookimage"><img class="cook-item" src="../testimage.jpeg"></div>
     <div class="recipebox">
@@ -43,18 +43,20 @@
         <center>
         <form method="POST" action="">
             <input type="text" placeholder="  로그인 후 댓글을 작성할 수 있습니다!" name="comment" size="100">
+            <input type="submit" value="저 장" class="submit">
         </form>
         </center>
-        <input type="button" value="저 장" class="submit">
     </div>
     <div class="profile">
         <div class="box1">
         <div class="name">작성자 이름</div>
         <div class="self-intro">작성자 자기소개</div>
+        <!-- 작성자 자기소개 넣기 -->
         </div>
         <div class="box2">
         <div class="follow"><img class="follow-img" src="../check.png" href=""></div>
         <div class="scrap"><img class="scrap-img" src="../external-link.png" href=""></div>
+        <!-- 팔로우와 스크랩 기능 -->
         </div>
     </div>
 </body>

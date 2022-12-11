@@ -7,15 +7,16 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="../css/mypagechange.css"/>
+    <link rel="stylesheet" href="../css/top.css">
 <title>마이페이지 수정</title>
 </head>
 <body>
-<div class="titlebox">
-    <div class="title" onclick="location.href='./main.html';">MNM</div>
-    <div class="icon1" onclick="location.href='./mypage.html';"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
-    <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
-</div>
-<div class="subtitle"><h1>마이페이지</h1></div>
+    <div class="titleBox">
+        <div class="title" onclick="location.href='./main.jsp';">MNM</div>
+        <div class="icon1" onclick="location.href='./mypagechange.jsp';"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
+        <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
+    </div>
+<div class="pageTitle"><h1>마이페이지</h1></div>
 <div class="bar">
     <div onclick="location.href='./mypagechange.html';" class="bar-item">마이페이지 수정</div>
     <div onclick="location.href='./mypagerecipe.html';" class="bar-item">내 레시피 / 구독계정</div>
@@ -53,7 +54,7 @@
         </tr> -->
     </table>
     <br><br>
-    <center><input type="button" id='recipereg' value="등록하기" class="button-save"></center>
+    <center><input type="submit" id='recipereg' value="등록하기" class="button-save"></center>
     </form>
     
 </div>
