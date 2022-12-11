@@ -147,7 +147,7 @@
 <div class="subtitle"><h1>레시피 등록</h1></div>
 <div>
     <div id="box">
-        <form method="POST" action="">
+        <form method="POST" action="../jsp/recipeInsert.jsp" onsubmit="">
             <table border="0">
                 <thead>
                 <tr>
@@ -162,35 +162,35 @@
                     <td>준비물</td>
                     <td><input type="text" name="ingredient" size="10" class="ingredient"></td>
                     <td><button class="put-step" onclick="addIngredient()">재료 추가</button></td>
-                    <!-- <select name = 'category'>
-                      <option value="korean">한식</option>
-                      <option value="chinese">중식</option>
-                      <option value="japanese">일식</option>
-                      <option value="western">양식</option>
-                      <option value="etc">기타</option>
-                    </select> -->
+                    <select name = 'category'>
+                      <option value="1">한식</option>
+                      <option value="2">중식</option>
+                      <option value="3">일식</option>
+                      <option value="4">양식</option>
+                      <option value="5">기타</option>
+                    </select>
                 </tr>
                 <tr>
                     <td>요리 정보</td>
                     <td>인원
                         <select name = 'personnel'>
-                            <option value="oneman">1인분</option>
-                            <option value="twoman">2인분</option>
-                            <option value="threeman">3인분</option>
-                            <option value="overfour">4인분이상</option>
+                            <option value="1">1인분</option>
+                            <option value="2">2인분</option>
+                            <option value="3">3인분</option>
+                            <option value="4">4인분이상</option>
                         </select>
                         시간
                         <select name = 'timetaken'>
-                            <option value="30min">30분이내</option>
-                            <option value="60min">1시간이내</option>
-                            <option value="120min">2시간이내</option>
-                            <option value="over120min">2시간이상</option>
+                            <option value="1">30분이내</option>
+                            <option value="2">1시간이내</option>
+                            <option value="3">2시간이내</option>
+                            <option value="4">2시간이상</option>
                         </select>
                         난이도
                         <select name = 'difficulty'>
-                            <option value="easy">아무나</option>
-                            <option value="soso">중급자</option>
-                            <option value="hard">상급자</option>
+                            <option value="1">아무나</option>
+                            <option value="2">중급자</option>
+                            <option value="3">상급자</option>
                             <!-- 카테고리의 도전!요리사는 2시간이상 + 상급자일 경우 -->
                         </select>
 
