@@ -8,265 +8,10 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); </style>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <title>레시피 등록</title>
     <script src="../js/popup.js"></script>
-    <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
+    <link rel="stylesheet" href="../css/recipesave.css"/>
+<title>레시피 등록</title>
 
-        .titlebox {
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-size: 70px;
-        }
-
-        .title {
-            font-size: 70px;
-            font-weight: bold;
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-left: 20px;
-
-        }
-
-        .subtitle {
-            background-color: #9fe7c9;
-            color: white;
-            text-align: center;
-            height: 104px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        #box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            height: 100%;
-            border: 1px solid lightgray;
-            border-radius: 20px;
-            background-color: white;
-            margin: auto;
-            margin-top: 36px;
-            margin-bottom: 36px;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        table {
-            border-collapse: separate;
-            border-spacing: 50px 30px;
-            font-size: 20px;
-            font-weight: 700;
-            color: gray;
-        }
-
-        .recipetitle {
-            width: 249px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-        }
-
-        .recipeintro {
-            width: 500px;
-            height: 88px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-        }
-
-        .phase {
-            width: 493px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-        }
-
-        .put-in {
-            font-size: 15px;
-            width: 80px;
-            height: 30px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: white;
-        }
-
-        .button-save {
-            font-size: 25px;
-            font-weight: 500;
-            width: 260px;
-            height: 57px;
-            color: white;
-            background-color: #9fe7c9;
-            border-radius: 20px;
-            border: 0;
-        }
-
-        .material-symbols-outlined {
-            margin-top: 20px;
-            font-size: 70px;
-            font-weight: bold;
-            box-sizing: border-box;
-            margin-right: auto;
-            font-variation-settings: 'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 48
-        }
-
-        .icon1 {
-            margin-left: auto;
-        }
-
-        select {
-            width: 120px; /* 원하는 너비설정 */
-            font-size: 15px;
-            padding: .8em .5em; /* 여백으로 높이 설정 */
-            font-family: inherit; /* 폰트 상속 */
-            background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
-            border: 1px solid #999;
-            border-radius: 10px; /* iOS 둥근모서리 제거 */
-            -webkit-appearance: none; /* 네이티브 외형 감추기 */
-            -moz-appearance: none;
-            appearance: none;
-
-        }
-
-        .title {
-            font-size: 70px;
-            font-weight: bold;
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-left: 20px;
-        }
-
-        .subtitle {
-            background-color: #9fe7c9;
-            color: white;
-            text-align: center;
-            height: 104px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        #box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80%;
-            height: 487px;
-            border: 1px solid lightgray;
-            border-radius: 20px;
-            background-color: white;
-            margin: auto;
-            margin-top: 36px;
-            margin-bottom: 36px;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        table {
-            border-collapse: separate;
-            border-spacing: 50px 30px;
-            font-size: 20px;
-            font-weight: 700;
-            color: gray;
-        }
-
-        .recipetitle {
-            width: 249px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        .recipeintro {
-            width: 500px;
-            height: 88px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        .phase {
-            width: 493px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-        .put-step {
-            font-size: 15px;
-            width: 80px;
-            height: 30px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: white;
-        }
-
-        .button-save {
-            font-size: 25px;
-            font-weight: 500;
-            width: 260px;
-            height: 57px;
-            color: white;
-            background-color: #9fe7c9;
-            border-radius: 20px;
-            border: 0;
-        }
-
-        .material-symbols-outlined {
-            margin-top: 20px;
-            font-size: 70px;
-            font-weight: bold;
-            box-sizing: border-box;
-            margin-right: auto;
-            font-variation-settings: 'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 48
-        }
-
-        .icon1 {
-            margin-left: auto;
-        }
-
-        select {
-            width: 120px; /* 원하는 너비설정 */
-            font-size: 15px;
-            padding: .8em .5em; /* 여백으로 높이 설정 */
-            font-family: inherit; /* 폰트 상속 */
-            background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
-            border: 1px solid #999;
-            border-radius: 10px; /* iOS 둥근모서리 제거 */
-            -webkit-appearance: none; /* 네이티브 외형 감추기 */
-            -moz-appearance: none;
-            appearance: none;
-        }
-
-        .ingredient {
-            width: 100px;
-            height: 49px;
-            border: 0.8px solid rgb(186, 186, 186);
-            background-color: rgb(232, 231, 231);
-            border-radius: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-    </style>
 </head>
 <body>
 <div class="titlebox">
@@ -282,7 +27,6 @@
     <div id="box">
         <form method="post" action="../jsp/recipeInsert.jsp" onsubmit="">
             <table border="0">
-                <thead>
                 <tr>
                     <td>레시피 제목</td>
                     <td><input type="text" name="recipetitle" size="20" class="recipetitle"></td>
@@ -292,37 +36,41 @@
                     <td><input type="text" name="recipeintro" size="100" class="recipeintro"></td>
                 </tr>
                 <tr name="put-in">
-                    <td>준비물</td>
-                    <td><input type="text" name="ingredient" size="10" class="ingredient"></td>
-                    <td>
-                        <button class="put-step" onclick="addIngredient()" name="put-in" type="button">재료 추가</button>
-                    </td>
-                    <select name='category'>
-                        <option value="1">한식</option>
-                        <option value="2">중식</option>
-                        <option value="3">일식</option>
-                        <option value="4">양식</option>
-                        <option value="5">기타</option>
-                    </select>
+                    <td>재료</td>
+                    <td name="put-in"><input type="text" name="ingredient" size="10" class="ingredient"></td>
+                    <td><button type="button" name="put-in" class="put-in">재료 추가</button></td>
                 </tr>
                 <tr>
                     <td>요리 정보</td>
-                    <td>인원
-                        <select name='personnel'>
+                    <td>종류
+                        <select name = 'category'>
+                            <option value="1">한식</option>
+                            <option value="2">중식</option>
+                            <option value="3">일식</option>
+                            <option value="4">양식</option>
+                            <option value="5">기타</option>
+                          </select>
+                        &nbsp;&nbsp;인원
+                        <select name = 'personnel'>
                             <option value="1">1인분</option>
                             <option value="2">2인분</option>
                             <option value="3">3인분</option>
                             <option value="4">4인분이상</option>
                         </select>
-                        시간
-                        <select name='timetaken'>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>시간
+                        <select name = 'timetaken'>
                             <option value="1">30분이내</option>
                             <option value="2">1시간이내</option>
                             <option value="3">2시간이내</option>
                             <option value="4">2시간이상</option>
                         </select>
-                        난이도
-                        <select name='difficulty'>
+                        &nbsp;&nbsp;난이도
+                        <select name = 'difficulty'>
                             <option value="1">아무나</option>
                             <option value="2">중급자</option>
                             <option value="3">상급자</option>
@@ -331,71 +79,36 @@
 
                     </td>
                 </tr>
-                </thead>
-                <tbody >
+
                 <tr name="put-step">
                     <td>단계 1</td>
                     <td><input type="text" name="phase" size="40" class="phase"></td>
-                    <td>
-                        <button type="button" class="put-step" onclick="divResize()" name="put-step">단계 추가</button>
-                    </td>
+                    <td><button type="button" name="put-step"class="put-in" onclick="divResize()">단계 추가</button></td>
                 </tr>
-                </tbody>
             </table>
             <center><input type="submit" value="등록하기" class="button-save"></center>
+            <br><br>
         </form>
     </div>
 </div>
-
-
-<!-- <script type="text/javascript">
-    var n=1;
-    function addRow() {
-        const table = document.getElementById('row');
-        var newRow = table.insertRow();//새 행 추가
-        const newCell1 = newRow.insertCell(0);//새 행에 cell 추가
-        const newCell2 = newRow.insertCell(1);//새 행에 cell 추가
-        const newCell3 = newRow.insertCell(2);//새 행에 cell 추가
-        n += 1;
-        newCell1.innerHTML = "단계 " + n ;
-        newCell2.innerHTML = "<input type='text' name='phase' size='40' class='phase'>";
-        newCell3.innerHTML = "<button class='put-step' onclick='addRow()'>단계 추가</button>";
-        divResize();
-    }
-    function divResize() {
-        var box = document.querySelector("#box");
-        boxHeight = box.offsetHeight;
-        console.log(boxHeight);
-        //document.getElementById("box").style.height = boxHeight + 80 + 'px';
-        box.offsetHeight = boxHeight + 80 + 'px';
-        alert(box.offsetHeight);
-    }
-    function addIngredient() { //열 추가하기
-        const table = document.getElementById('inrow');
-        var newRow = table.insertRow();//새 행 추가
-        const newCell2 = newRow.insertCell(1);//새 행에 cell 추가
-        newCell2.innerHTML = "<input type='text' name='ingredient' size='10' class='ingredient'>";
-        divResize();
-    }
-
-    </script> -->
 <script>
     var n = 1;
     $(document).on("click", "button[name=put-step]", function () {
         n += 1;
         var addsteptest =
-            '<tr name="put-step">' +
-            '<td>단계 ' + n + '</td>' +
+        '<tr name="put-step">' +
+            '<td>단계 '+ n +'</td>'+
             '<td><input type="text" name="phase" size="40" class="phase"></td>' +
-            '</tr>';
-        var trHtml = $("tr[name=put-step]:last");//last로 사용하여 trstep라는 명을 가진 마지막 태그 호출
+        '</tr>' ;
+        var trHtml = $("tr[name=put-step]:last");//last로 사용하여 put-step라는 명을 가진 마지막 태그 호출
         trHtml.after(addsteptest);//그 태그 뒤에 붙이기
     });
-    $(document).on("click", "button[name=put-in]", function () {
-        var addIngredient =
-            '<td><input type="text" name="ingredient" size="10" class="ingredient"></td>';
-        var trHtml2 = $("tr[name=put-in]:last");
-        trHtml2.after(addIngredient);
+    $(document).on("click", "button[name=put-in]", function()
+    {
+        var addIngredient = 
+        '<input type="text" name="ingredient" size="10" class="ingredient">' ;
+        var tdHtml = $("input[name=ingredient]:last");
+        tdHtml.after(addIngredient);
     });
 
 </script>
