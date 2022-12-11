@@ -29,8 +29,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 487px;
+    width: 70%;
+    height: 100%;
     border: 1px solid lightgray;
     border-radius: 20px;
     background-color: white;
@@ -67,7 +67,7 @@ table {
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
 }
-.put-step {
+.put-in {
     font-size: 15px;
     width: 80px;
     height: 30px;
@@ -84,6 +84,18 @@ table {
     border-radius: 20px;
     border:0;
 }
+.material-symbols-outlined {
+    margin-top: 20px;
+    font-size: 70px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right:auto;
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+}
 .icon1 {
     margin-left: auto;
 }
@@ -99,11 +111,20 @@ select {
     -webkit-appearance: none; /* 네이티브 외형 감추기 */
     -moz-appearance: none;
     appearance: none;
-    }
+
+}
+
 .ingredient {
     width: 100px;
     height: 49px;
     border: 0.8px solid rgb(186, 186, 186);
     background-color: rgb(232, 231, 231);
     border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 5px 5px 5px 5px;
+}
+
+td[name=put-in] {
+    width: 50px;
 }
