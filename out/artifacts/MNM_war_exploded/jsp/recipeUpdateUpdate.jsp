@@ -69,7 +69,7 @@
             String recipeUploader = resultSet.getString("userEmail");
             // if user email is not same as recipe uploader, alert and go back to recipe page
             if (!recipeUploader.equals(userEmail)) {
-                out.println("<script>alert('수정 권한이 없습니다.'); location.href='recipe.jsp';</script>");
+                out.println("<script>alert('수정 권한이 없습니다.'); history.back();</script>");
             }
         }
 
@@ -101,6 +101,9 @@
         // insert new progress data
         for (int i = 0; i < progresses.length; i++) {
             int progressNo = i + 1;
+            if (progresses[i].equals("") || progresses[i] == null) {
+                continue;
+            }
             sql = "INSERT INTO progress (progressOrder, progressText, recipeNo) VALUES ('" + progressNo + "', '" + progresses[i] + "', '" + recipeNo + "')";
             statement.executeUpdate(sql);
         }
@@ -113,6 +116,9 @@
 
         // insert new ingredient data
         for (int i = 0; i < ingredients.length; i++) {
+            if (ingredients[i].equals("") || ingredients[i] == null) {
+                continue;
+            }
             sql = "INSERT INTO ingredient (ingredientName, ingredientAmount, recipeNo) VALUES ('" + ingredients[i] + "', '" + 0 + "', '" + recipeNo + "')";
             statement.executeUpdate(sql);
         }
