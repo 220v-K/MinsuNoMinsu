@@ -151,6 +151,7 @@
                         </td>
                         <% } %>
                     </td>
+                    </tr>
             </table>
             <br><br>
         </form>

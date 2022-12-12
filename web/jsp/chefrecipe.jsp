@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/top.css">
     <link rel="stylesheet" href="../css/signup.css">
     <script src="../js/popup.js"></script>
-<title>도전! 요리사</title>
+<title>도전! 요리사</title>
 </head>
 <body>
 <div class="titleBox">

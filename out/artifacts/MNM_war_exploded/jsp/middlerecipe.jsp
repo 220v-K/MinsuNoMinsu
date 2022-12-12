@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/top.css">
     <link rel="stylesheet" href="../css/signup.css">
     <script src="../js/popup.js"></script>
-<title>중급 요리</title>
+<title>중급 요리</title>
 </head>
 <body>
 <%
