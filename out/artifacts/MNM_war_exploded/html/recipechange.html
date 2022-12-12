@@ -9,15 +9,16 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="../css/recipechange.css">
+    <link rel="stylesheet" href="../css/top.css">
 <title>레시피 수정</title>
 </head>
 <body>
-    <div class="titlebox">
-        <div class="title" onclick="location.href='./main.html';">MNM</div>
-        <div class="icon1" onclick="openPopup()"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
-        <div class="icon2" onclick="location.href='./recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
+    <div class="titleBox">
+        <div class="title" onclick="location.href='./main.jsp';">MNM</div>
+        <div class="icon1" onclick="location.href='./mypagechange.jsp';"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
+        <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined" style="color : red;">edit</span></div>
     </div>
-<div class="subtitle"><h1>레시피 수정</h1></div>
+<div class="pageTitle"><h1>레시피 수정</h1></div>
 <div>
 <div id="box">
     <form method="POST" action="">
@@ -66,7 +67,6 @@
                 <option value="hard">상급자</option>
 <!-- 카테고리의 도전!요리사는 2시간이상 + 상급자일 경우 -->
               </select>
-              
             </td>
         </tr>
         </thead>
@@ -74,18 +74,18 @@
         <tr>
             <td>단계 1</td>
             <td><input type="text" name="phase" size="40" class="phase"></td>
-            <td><button class="put-step" onclick="divResize()">단계 추가</button></td>
+            <td><button class="put-step">단계 추가</button></td>
         </tr>
         </tbody>
     </table>
-    </form>
-</div>
-</div>
-<div class="twobutton">
+    <div class="twobutton">
     <input type="button" value="수정하기" class="button-save">
     <input type="button" value="수정 취소하기" class="button-save">
+	</div>
+    </form>
+    <br><br>
 </div>
-
+</div>
 <script type="text/javascript">
     var n=1;
     function addRow() {

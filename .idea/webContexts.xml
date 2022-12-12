@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/web/html/popup.html" value="file://$PROJECT_DIR$/web/html" />
         <entry key="file://$PROJECT_DIR$/web/html/recipesave.html" value="file://$PROJECT_DIR$/web/html" />
+        <entry key="file://$PROJECT_DIR$/web/jsp/main.jsp" value="file://$PROJECT_DIR$/web/jsp" />
         <entry key="file://$PROJECT_DIR$/web/jsp/signUp.jsp" value="file://$PROJECT_DIR$/web/jsp" />
       </map>
     </option>

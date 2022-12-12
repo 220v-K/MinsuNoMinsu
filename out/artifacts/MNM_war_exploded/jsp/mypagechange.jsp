@@ -17,6 +17,7 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); </style>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="../css/top.css"/>
     <link rel="stylesheet" href="../css/mypagechange.css"/>
     <title>마이페이지 수정</title>
     <script>

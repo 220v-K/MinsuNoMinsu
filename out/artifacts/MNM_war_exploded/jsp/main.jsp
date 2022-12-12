@@ -97,10 +97,10 @@ To change this template use File | Settings | File Templates.
 </div>
 
 <div class="nav">
-    <div class="nav-item" onclick="location.href='../html/basicrecipe.html';">초급요리</div>
-    <div class="nav-item" onclick="location.href='../html/middlerecipe.html';">중급요리</div>
-    <div class="nav-item" onclick="location.href='../html/hardrecipe.html';">고급요리</div>
-    <div class="nav-item" onclick="location.href='../html/hardrecipe.html';">도전! 요리사</div>
+    <div class="nav-item" onclick="location.href='./basicrecipe.jsp';">초급요리</div>
+    <div class="nav-item" onclick="location.href='./middlerecipe.jsp';">중급요리</div>
+    <div class="nav-item" onclick="location.href='./hardrecipe.jsp';">고급요리</div>
+    <div class="nav-item" onclick="location.href='./chefrecipe.jsp';">도전! 요리사</div>
 </div>
 <br><br>
 

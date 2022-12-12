@@ -49,7 +49,7 @@ To change this template use File | Settings | File Templates.
     try {
         Class.forName("com.mysql.jdbc.Driver");
         String jdbcUrl = "jdbc:mysql://localhost:3306/MNM?serverTimezone=UTC";
-        connection = DriverManager.getConnection(jdbcUrl, "root", "0000");
+        connection = DriverManager.getConnection(jdbcUrl, "root", "02220222");
         statement = connection.createStatement();
         // query of fetch last 3 data from recipe table
         String sql = "SELECT * FROM recipe ORDER BY recipeNo DESC LIMIT 3";
