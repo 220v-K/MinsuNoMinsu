@@ -95,7 +95,8 @@
 
 <div class="titlebox">
     <div class="title" onclick="location.href='../jsp/main.jsp';">MNM</div>
-    <div class="icon1" onclick="openPopup();"><span class="material-symbols-outlined" style="color : green;">account_circle</span></div>
+    <div class="icon1" onclick="openPopup();"><span class="material-symbols-outlined" style="color : green;">account_circle</span>
+    </div>
     <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined"
                                                                                 style="color : red;">edit</span></div>
 </div>
@@ -138,7 +139,12 @@
                 </tr> -->
             </table>
             <br><br>
-            <center><input type="submit" id='recipereg' value="등록하기" class="button-save"></center>
+            <center><input type="submit" id='recipereg' value="등록하기" class="button-save">
+                <input type="button"
+                       id='logout' value="로그아웃"
+                       class="button-save" onclick="location.href='../jsp/logout.jsp'">
+            </center>
+
         </form>
 
     </div>

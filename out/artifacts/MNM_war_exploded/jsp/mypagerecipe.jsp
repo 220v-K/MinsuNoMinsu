@@ -131,7 +131,7 @@
                 <tr>
                     <td name="myfollower">구독한 계정
                         <% for (String followUserNickname : followUserNicknameList) { %>
-                        <td class="follower"><%= followUserNickname %>
+                        <td class="123"><%= followUserNickname %>
                         </td>
                         <% } %>
                     </td>
@@ -140,17 +140,18 @@
                 <tr name="myrecipe">
                     <td>내가 작성한 레시피</td>
                     <% for (String myRecipeName : myRecipeNameList) { %>
-                    <td class="myrecipe"><%= myRecipeName %>
+                    <td class="123"><a href="recipeUpdate.jsp?recipeName=<%=myRecipeName%>"><%= myRecipeName %></a>
                     </td>
                     <% } %>
                 </tr>
                 <tr name="myfavorite">
                     <td>즐겨찾기한 레시피
                         <% for (String favoriteRecipeName : favoriteRecipeNameList) { %>
-                        <td class="favorite"><%= favoriteRecipeName %>
+                    <td class="favorite"><a href="recipe.jsp?recipeName=<%=favoriteRecipeName%>"><%= favoriteRecipeName %></a>
                         </td>
                         <% } %>
                     </td>
+                    </tr>
             </table>
             <br><br>
         </form>
