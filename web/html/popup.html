@@ -65,6 +65,9 @@
             padding-left: 30px;
             padding-right: 30px;
         }
+        .signup{
+            width:100%;
+        }
     </style>
     <script>
         // if session not exists
@@ -98,15 +101,8 @@
     <br><br>
 
     <input type="submit" value="로그인" class="submit">
+    <button type="button" class="submit" onclick="opener.location.href='./signup.html'; self.close(); return false;">회원가입</button>
 </form>
-<div class="link">
-    <!-- 새 창에서 열도록 수정하기 -->
-    <div onclick="closepopup()">회원가입</div>
-    |
-    <div onclick="closepopup()">아이디 찾기</div>
-    |
-    <div onclick="closepopup()">비밀번호 찾기</div>
-</div>
 
 
 <script>
@@ -126,7 +122,12 @@
     }
 
     function closepopup() {
-        window.opener.location.href();
+        window.opener.location.href= "./signup.html";
+        self.close();
+    }
+
+    function signUp() {
+        window.parent.location.href= "./signup.html";
         self.close();
     }
 </script>

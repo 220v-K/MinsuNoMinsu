@@ -262,8 +262,8 @@
             <!-- 작성자 자기소개 넣기 -->
         </div>
         <div class="box2">
-            <div class="follow"><img class="follow-img" src="../check.png" href=""></div>
-            <div class="scrap"><img class="scrap-img" src="../external-link.png" href=""></div>
+            <div class="follow"><a href="../jsp/follow.jsp?targetEmail=<%=userEmail%>"><img class="follow-img" src="../check.png"></a></div>
+            <div class="scrap"><a href="../jsp/scrap.jsp?recipeNo=<%=recipeNo%>"><img class="scrap-img" src="../external-link.png"></a></div>
             <!-- 팔로우와 스크랩 기능 -->
         </div>
     </div>
