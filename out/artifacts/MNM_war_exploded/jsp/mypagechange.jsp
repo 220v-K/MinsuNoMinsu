@@ -99,10 +99,10 @@
     <div class="icon2" onclick="location.href='../html/recipesave.html';"><span class="material-symbols-outlined"
                                                                                 style="color : red;">edit</span></div>
 </div>
-<div class="subtitle"><h1>마이페이지</h1></div>
+<div class="pageTitle"><h1>마이페이지</h1></div>
 <div class="bar">
     <div onclick="location.href='./mypagechange.jsp';" class="bar-item">마이페이지 수정</div>
-    <div onclick="location.href='./mypagerecipe.html';" class="bar-item">내 레시피 / 구독계정</div>
+    <div onclick="location.href='./mypagerecipe.jsp';" class="bar-item">내 레시피 / 구독계정</div>
 </div>
 <div>
     <div class="box">
