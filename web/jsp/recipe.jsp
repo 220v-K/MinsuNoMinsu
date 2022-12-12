@@ -59,10 +59,10 @@
     }
 
 
-    System.out.println("email: " + email);
+/*     System.out.println("email: " + email); */
 
 
-    System.out.println("recipeName: " + recipeName);
+/*     System.out.println("recipeName: " + recipeName); */
 
     // connect to database
 
@@ -135,8 +135,8 @@
             comments.add(resultSet.getString("commentText"));
             commentTime.add(resultSet.getDate("commentTime"));
             commentUser.add(resultSet.getString("userEmail"));
-            System.out.println("commentUser: " + commentUser);
-            System.out.println("commentText: " + resultSet.getString("commentText"));
+/*             System.out.println("commentUser: " + commentUser); */
+/*             System.out.println("commentText: " + resultSet.getString("commentText")); */
         }
 
         // fetch userNick from user table

@@ -83,3 +83,12 @@ tr, td {
     float: right;
 
 }
+.myfollower {
+    width: 30px;
+}
+
+.follower {
+	background-color: white;
+	font-size: 20px;
+	color:gray;
+}
